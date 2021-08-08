@@ -1,0 +1,21 @@
+
+.container {
+    width: 80vw;
+    min-height: 50vh;
+    margin:0 auto;
+    border: 1px solid black;
+    direction: rtl;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1_container { grid-area: 1 / 2 / 2 / 4; }
+    .div2_container { grid-area: 2 / 1 / 7 / 5; }
+
+    .div1_container__title{
+        text-align: center;
+        border-bottom: 2px dotted black;
+    }
