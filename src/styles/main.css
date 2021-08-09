@@ -12,12 +12,14 @@
     direction: rtl;
     display: grid;
     margin:  auto;
+    overflow: scroll;
     }    
-    .div1_container { grid-area: 1 / 2 / 2 / 4; }
-    .div2_container { grid-area: 2 / 1 / 7 / 5; }
+    .div1_container {max-width: 95%; grid-area: 1 / 2 / 2 / 4; }
+    .div2_container {max-width: 95%;overflow: scroll; grid-area: 2 / 1 / 7 / 5; }
 
     .div1_container__title{
         text-align: center;
+        max-width: 90%;
         border-bottom: 2px dotted black;
     }
 
