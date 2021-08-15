@@ -13,7 +13,7 @@ const addMission=async (title,description)=>{
       });
 }
 
-const removeMission=(title)=>{
+const removeMission=async (title)=>{
     axios.post('http://localhost:8000/api/products/remove', {
         title,
       })
@@ -24,7 +24,7 @@ const removeMission=(title)=>{
         return(error);
       });
 }
-const updateMission=(title,isDone)=>{
+const updateMission=async(title,isDone)=>{
     axios.post('http://localhost:8000/api/products/update/product', {
         title,
         isDone
@@ -36,10 +36,9 @@ const updateMission=(title,isDone)=>{
         return(error);
       });
 }
-const validationCheck=async(title,description,list)=>{
+const validationCheck=async (title,description,list)=>{
     if(title.length<1||description.length<1)
      return false 
-    // check if exist in list
      const found = list.some(el => el.title === title);
         if(found) return false      
 
